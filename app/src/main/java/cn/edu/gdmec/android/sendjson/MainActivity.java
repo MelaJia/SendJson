@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
         handler=new Handler(){
             @Override
             public void handleMessage(Message msg) {
-                while (msg.what==1){
-
-                }
+                Toast.makeText(MainActivity.this, msg.obj.toString(), Toast.LENGTH_SHORT).show();
 
                 super.handleMessage(msg);
             }
